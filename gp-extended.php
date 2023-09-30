@@ -28,4 +28,6 @@ define( 'GP_EXTENDED_AUTHOR', 'Code Tot JSC' );
 define( 'GP_EXTENDED_AUTHOR_URI', 'https://codetot.com');
 define( 'GP_EXTENDED_PLUGIN_URI', plugins_url('gp-extended'));
 
-require_once GP_EXTENDED_DIR . '/inc/local-dev.php';
+require_once GP_EXTENDED_DIR . 'inc/local-dev.php';
+
+include_once GP_EXTENDED_DIR . 'inc/blocks.php';
