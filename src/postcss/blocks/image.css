@@ -1,0 +1,29 @@
+@critical;
+.image--cover .image__img {
+	object-fit: cover;
+}
+
+.image--contain .image__img {
+	object-fit: contain;
+}
+
+.image--default .image__img {
+	max-width: 100%;
+	height: auto;
+}
+
+.image.ratio {
+	overflow: hidden;
+}
+
+.image--hover-scale {
+	& .image__img {
+		transition: transform 0.3s ease;
+	}
+
+	&:hover {
+		& .image__img {
+			transform: scale(1.05);
+		}
+	}
+}

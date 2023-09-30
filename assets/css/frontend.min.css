@@ -1,0 +1,1 @@
+.image--cover .image__img{object-fit:cover}.image--contain .image__img{object-fit:contain}.image--default .image__img{height:auto;max-width:100%}.image.ratio{overflow:hidden}.image--hover-scale .image__img{transition:transform .3s ease}.image--hover-scale:hover .image__img{transform:scale(1.05)}

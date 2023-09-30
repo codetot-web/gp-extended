@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'GP_EXTENDED_VERSION', '5.1.13' );
+define( 'GP_EXTENDED_VERSION', '0.0.1' );
 define( 'GP_EXTENDED_PLUGIN_SLUG', 'gp-extended' );
 define( 'GP_EXTENDED_PLUGIN_NAME', esc_html_x('GP Extended', 'plugin name', 'gp-extended'));
 define( 'GP_EXTENDED_DIR', plugin_dir_path(__FILE__));
@@ -29,5 +29,5 @@ define( 'GP_EXTENDED_AUTHOR_URI', 'https://codetot.com');
 define( 'GP_EXTENDED_PLUGIN_URI', plugins_url('gp-extended'));
 
 require_once GP_EXTENDED_DIR . 'inc/local-dev.php';
-
+require_once GP_EXTENDED_DIR . 'inc/assets.php';
 include_once GP_EXTENDED_DIR . 'inc/blocks.php';
