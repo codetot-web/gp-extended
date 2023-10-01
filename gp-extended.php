@@ -30,4 +30,5 @@ define( 'GP_EXTENDED_PLUGIN_URI', plugins_url('gp-extended'));
 
 require_once GP_EXTENDED_DIR . 'inc/local-dev.php';
 require_once GP_EXTENDED_DIR . 'inc/assets.php';
+require_once GP_EXTENDED_DIR . 'inc/customize/class-gp-extended-customize-init.php';
 include_once GP_EXTENDED_DIR . 'inc/blocks.php';
