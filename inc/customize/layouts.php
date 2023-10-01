@@ -50,6 +50,14 @@ class Layouts extends Customize_Section {
 		]);
 	}
 
+	function get_final_control_args( $args ) {
+		$default_args = [
+			'section' => $this->section_id
+		];
+
+		return array_merge( $default_args, $args );
+	}
+
 	/**
 	 * Init
 	 */
@@ -64,29 +72,57 @@ class Layouts extends Customize_Section {
 		$controls = [
 			[
 				'id'       => 'archive_item',
-				'name'     => __('Archive Item', 'gp-extended'),
+				'name'     => __('Archive: Item', 'gp-extended'),
 				'settings' => [
 					'default' => 'minimal',
 					'sanitize_callback' => 'sanitize_text_field'
 				],
-				'args' => [
-					'section' => $this->section_id,
+				'args' => $this->get_final_control_args([
 					'type'    => 'select',
 					'choices' => $this->get_archive_item_choices()
-				]
+				])
 			],
 			[
-				'id'       => 'archive_layout',
-				'name'     => __('Archive Layout', 'gp-extended'),
+				'id'       => 'archive_layout_column',
+				'name'     => __('Archive: Column Layout', 'gp-extended'),
 				'settings' => [
 					'default' => '3-col',
 					'sanitize_callback' => 'sanitize_text_field'
 				],
-				'args' => [
-					'section' => $this->section_id,
+				'args' => $this->get_final_control_args([
 					'type'    => 'select',
 					'choices' => $this->get_archive_layout_choices()
-				]
+				])
+			],
+			[
+				'id'       => 'archive_enable_load_more_description',
+				'name'     => __('Archive: Enable Load more description', 'gp-extended'),
+				'settings' => [
+					'default' => false
+				],
+				'args' => $this->get_final_control_args([
+					'type' => 'checkbox'
+				])
+			],
+			[
+				'id'       => 'single_post_enable_author_box',
+				'name'     => __('Single Post: Enable Author Box', 'gp-extended'),
+				'settings' => [
+					'default' => true
+				],
+				'args' => $this->get_final_control_args([
+					'type' => 'checkbox'
+				])
+			],
+			[
+				'id'       => 'single_post_enable_social_share',
+				'name'     => __('Single Post: Enable Social Share', 'gp-extended'),
+				'settings' => [
+					'default' => true
+				],
+				'args' => $this->get_final_control_args([
+					'type' => 'checkbox'
+				])
 			]
 		];
 

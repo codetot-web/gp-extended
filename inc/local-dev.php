@@ -35,7 +35,7 @@ if ( ! function_exists('gp_extended_disable_live_plugins' ) && in_array( $enviro
 	/**
 	 * Disable live plugins on local/development environment
 	 */
-	function gp_extended_disable_live_plugins() 
+	function gp_extended_disable_live_plugins()
 	{
 		$production_plugins = gp_extended_get_live_plugins();
 

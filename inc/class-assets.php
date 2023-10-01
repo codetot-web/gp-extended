@@ -7,7 +7,9 @@
  * @since 0.0.1
  */
 
-class Gp_Codetot_Assets {
+namespace GpExtended;
+
+class Assets {
 	public function __construct()
 	{
 		add_action('wp_enqueue_scripts', [$this, 'frontend_assets'], 5);
@@ -26,4 +28,4 @@ class Gp_Codetot_Assets {
 	}
 }
 
-new Gp_Codetot_Assets();
+new Assets();

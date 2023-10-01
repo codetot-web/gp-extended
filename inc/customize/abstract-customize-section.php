@@ -24,13 +24,6 @@ abstract class Customize_Section {
 	 */
 	public $panel_id = 'gp-extended-panel';
 
-	/**
-	 * get_option($setting_key)
-	 *
-	 * @var string
-	 */
-	public static $setting_key = 'gp_extended_settings';
-
 	public function __construct() {}
 
 	/**
@@ -72,7 +65,7 @@ abstract class Customize_Section {
 	 */
 	private function get_control_setting( $control_id )
 	{
-		return sprintf( '%s[%s]', $this::$setting_key, sanitize_key( $control_id ) );
+		return sprintf( '%s[%s]', GP_EXTENDED_SETTINGS_KEY, sanitize_key( $control_id ) );
 	}
 
 	/**
