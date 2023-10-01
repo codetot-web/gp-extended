@@ -27,8 +27,14 @@ define( 'GP_EXTENDED_PATH', dirname( plugin_basename( __FILE__ ) ) );
 define( 'GP_EXTENDED_AUTHOR', 'Code Tot JSC' );
 define( 'GP_EXTENDED_AUTHOR_URI', 'https://codetot.com');
 define( 'GP_EXTENDED_PLUGIN_URI', plugins_url('gp-extended'));
+define( 'GP_EXTENDED_SETTINGS_KEY', 'gp_extended_settings' );
 
-require_once GP_EXTENDED_DIR . 'inc/local-dev.php';
-require_once GP_EXTENDED_DIR . 'inc/assets.php';
-require_once GP_EXTENDED_DIR . 'inc/customize/class-gp-extended-customize-init.php';
-include_once GP_EXTENDED_DIR . 'inc/blocks.php';
+include_once GP_EXTENDED_DIR . 'inc/helpers.php';
+include_once GP_EXTENDED_DIR . 'inc/local-dev.php';
+
+require_once GP_EXTENDED_DIR . 'inc/class-assets.php';
+require_once GP_EXTENDED_DIR . 'inc/class-settings.php';
+
+require_once GP_EXTENDED_DIR . 'inc/customize/class-init.php';
+include_once GP_EXTENDED_DIR . 'inc/layouts/class-init.php';
+

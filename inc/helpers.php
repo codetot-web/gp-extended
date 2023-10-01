@@ -1,7 +1,7 @@
 <?php
 /**
  * Blocks Class
- * 
+ *
  * @package Gp_Extended
  * @author codetot
  * @since 0.0.1
@@ -12,7 +12,7 @@
  *
  * @param string $block_name
  * @param array $args
- * 
+ *
  */
 function gp_extended_the_block( $block_name, $args = [] ) {
     $block_path = file_exists(
@@ -48,4 +48,14 @@ function gp_extended_get_block( $block_name, $args = [ ] ) {
     return ob_get_clean();
 }
 
+/**
+ * Get single setting
+ *
+ * @param string $key
+ * @return bool|string|null
+ */
+function gp_extended_get_setting( $key ) {
+	$settings_class = new \GpExtended\Settings();
 
+	return $settings_class->get_setting( $key );
+}

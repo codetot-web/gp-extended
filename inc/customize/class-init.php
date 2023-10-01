@@ -7,7 +7,12 @@
  * @since 0.0.1
  */
 
-class Gp_Extended_Customize_Init {
+namespace GpExtended\Customize;
+
+/**
+ * Init
+ */
+ class Init {
 	/**
 	 * Global $wp_customize
 	 *
@@ -41,7 +46,8 @@ class Gp_Extended_Customize_Init {
 		require_once GP_EXTENDED_DIR . '/inc/customize/abstract-customize-section.php';
 
 		require_once GP_EXTENDED_DIR . '/inc/customize/layouts.php';
+		require_once GP_EXTENDED_DIR . '/inc/customize/features.php';
 	}
 }
 
-new Gp_Extended_Customize_Init();
+new Init();
