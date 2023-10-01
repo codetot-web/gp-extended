@@ -24,7 +24,7 @@
 	position: relative;
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: -40px;
 		left: 0;
@@ -45,38 +45,19 @@
 	z-index: 2;
 	border-radius: 0.25em;
 	border: none;
-	color: var(--bs-primary);
+	background: inherit;
 	padding: 0.5em 0;
 
 	& svg {
-		fill: var(--bs-primary);
 		width: 10px;
 		height: 10px;
 	}
 
-	&::after {
-		content: '';
-		height: 2px;
-		width: 0;
-		background: var(--bs-primary);
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		transition: 0.4s ease;
-	}
-
 	&:focus {
 		background: transparent;
-		color: var(--bs-primary);
-
-		& svg {
-			fill: var(--bs-primary);
-		}
 	}
 
 	&:hover {
-		color: var(--bs-primary);
-
 		&::after {
 			width: 100%;
 		}

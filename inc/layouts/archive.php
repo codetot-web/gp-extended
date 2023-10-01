@@ -31,8 +31,6 @@ class Archive {
 
 		$archive_load_more = gp_extended_get_setting('archive_enable_load_more_description') ?? false;
 
-		var_dump( $archive_load_more );
-
 		if ( $archive_load_more) {
 			remove_action( 'generate_after_archive_title', 'generate_do_archive_description' );
 			add_action( 'generate_after_archive_title', [$this, 'archive_description_load_more'] );
